@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>My Secret Bakery</title>
+</head>
+
+<style>
+
+/*레이아웃*/
+.header {
+   height: 400px;
+   position: relative;
+   top: 0px;
+   background-image: url("image/진열대 위 크로와상.jpg");
+   background-size: 1900px 900px;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   overflow: hidden;
+}
+
+
+.footer {
+   position: relative;
+   height: 200px;
+   bottom: 0px;
+   background-color: #ffcccc;
+}
+
+/*설정*/
+.badysytle {
+	min-width:800px;
+   background-color: white;
+   margin: 0px;
+}
+
+.titlestyle {
+   font-family: "휴먼둥근헤드라인";
+   font-size: 80px;
+   position: relativel;
+   color: #ffcccc;
+   letter-spacing: -10px;
+   padding-top: 175px;
+   text-align: center;
+}
+
+.menu {
+   margin: 0 auto;
+   width: 845px;
+   position: relative;
+   list-style-type: none;/*앞에 원 없앰*/
+   padding-left: 30px;
+}
+
+.menu a {
+   font-family: "휴먼둥근헤드라인";
+   text-align: center; /* 텍스트 중앙정렬 */
+   color: white;
+   text-decoration: none; /* 텍스트 밑줄제거(보통 하이퍼링크 제거시 사용) */
+   margin-left: 23px;
+   padding-right: 30px;
+   border-right: 1px solid;
+   letter-spacing: 10px;
+   cursor: pointer;
+}
+.span a {
+/* 커서를 해당 태그에 위치시 마우스 포인터를 클릭포인터로 변경 
+   버튼이나 submit을 제외한 태그들은 커서가 기본값이기에 이를 변경하기 위에 사용*/
+  cursor: pointer; 
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.span a:after {
+  content: '\00bb'; /* 따옴표 문자 불러오기 자세한건  https://www.w3schools.com/cssref/pr_gen_quotes.asp 참조 */
+  position: absolute;
+  opacity: 0; /* 투명도 */
+  top: 0;
+  right: -20px;
+  transition: 0.5s; /* 애니메이션 효과의 시간설정 */
+}
+
+.span:hover a {
+  padding-right: 25px;
+}
+
+.span:hover a:after {
+  opacity: 1;
+  right: 0;
+}
+.menu li{
+   display: inline-block;
+}
+.infoTB {
+   position: relative;
+   margin: 0 auto;
+   width: 819px;
+}
+
+.inTb {
+   border-collapse: collapse; /* 테이블 테두리 하나로 통일 */
+   margin-bottom: 30px;
+}
+
+.inTb td {
+   font-family: "맑은 고딕";
+   border-top: 1px solid;
+}
+
+.top{
+   position: fixed;
+   width:60px; height:30px;
+   bottom:30px; right:30px;
+   color: #ff4d4d;
+   text-decoration: none;
+}
+
+.con{
+	position: relative;
+	width: 670px;
+	height: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+</style>
+<body class="badysytle">
+   <div class="header">
+      <div class="titlestyle">
+         <a>My Secret Bakery</a>
+      </div>
+      <br> <br> <br>
+      <div class="menu">
+      <!-- href는 해당 경로로 이동하게하는 하이퍼링크
+         문서의 특정위치,다른 페이지 등으로 이동가능
+        --> 
+         <span class="span"><a href="home.html">Home</a></span>  
+			<span class="span"><a href="info.html">Info</a></span>
+			<span class="span"><a href="gallery.html">Gallery</a></span> 
+			<span class="span"><a href="today's bread.html">Today's Bread</a></span>
+      </div>
+   </div>
+   <div class="content">
+      <br> <br>
+      <H1 id="info" 
+         style="letter-spacing: 12px; text-align: center; margin: 50px 0px;">Info</H1>
+         <div class="con"><a><img src="image/빵의 유래.jpg"></a></div>
+         <br><br><br><br><br><br>
+      <div class="infoTB">
+         <table class="inTb" style="margin-bottom: 75px;">
+            <tr>
+               <td
+                  style="font-weight: bolder; border-top: 2px solid; font-size: 30px; width: 165px; padding-left: 12px; padding-top: 10px;">제작배경</td>
+               <td
+                  style="padding-left: 29px; border-top: 1px solid; width: 601px;">다양한 빵들을 주요한 나라별로 보기 좋게 정리한 블로그를 만들어 보고자하는데서 시작하게 됨.
+                  </td>
+            </tr>
+         </table>
+         <table class="inTb">
+            <tr>
+               <td
+                  style="font-weight: bolder; border-top: 2px solid; font-size: 30px; width: 165px; padding-left: 12px; padding-top: 10px;">제작목적</td>
+               <td
+                  style="padding-left: 29px; border-top: 1px solid; width: 601px;">빵을 좋아하는 많은 사람들과 이미지를 공유할 뿐만아니라 요일별 추천메뉴를 제공하고자 함.</td>
+            </tr>
+         </table>
+      </div>
+      <table>
+         <tr>
+            <td></td>
+         </tr>
+      </table>
+      <br> <br> 
+   </div>
+   <div class="footer"></div>
+       <div class="top"><a href="#" class="top">↑Top</a></div>
+   </div>
+</body>
+</html>

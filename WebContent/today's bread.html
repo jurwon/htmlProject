@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>My Secret Bakery</title>
+</head>
+
+<style>
+
+/*레이아웃*/
+.header {
+	height: 400px;
+	position: relative;
+	top: 0px;
+	background-image: url("image/진열대 위 크로와상.jpg");
+	background-size: 1900px 900px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
+.content {
+	height: 1227px;
+}
+
+.footer {
+	position: relative;
+	height: 200px;
+	bottom: 0px;
+	background-color: #ffcccc;
+}
+
+/*설정*/
+.badysytle {
+	min-width: 800px;
+	background-color: white;
+	margin: 0px;
+	text-align: center;
+}
+
+.titlestyle {
+	font-family: "휴먼둥근헤드라인";
+	font-size: 80px;
+	position: relativel;
+	color: #ffcccc;
+	letter-spacing: -10px;
+	padding-top: 175px;
+	text-align: center;
+}
+
+.menu {
+	margin: 0 auto;
+	width: 845px;
+	position: relative;
+	list-style-type: none; /*앞에 원 없앰*/
+	padding-left: 30px;
+}
+
+.menu a {
+	font-family: "휴먼둥근헤드라인";
+	text-align: center; /* 텍스트 중앙정렬 */
+	color: white;
+	text-decoration: none; /* 텍스트 밑줄제거(보통 하이퍼링크 제거시 사용) */
+	margin-left: 23px;
+	padding-right: 30px;
+	border-right: 1px solid;
+	letter-spacing: 10px;
+	cursor: pointer;
+}
+
+.span a {
+	/* 커서를 해당 태그에 위치시 마우스 포인터를 클릭포인터로 변경 
+   버튼이나 submit을 제외한 태그들은 커서가 기본값이기에 이를 변경하기 위에 사용*/
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.span a:after {
+	content: '\00bb';
+	/* 따옴표 문자 불러오기 자세한건  https://www.w3schools.com/cssref/pr_gen_quotes.asp 참조 */
+	position: absolute;
+	opacity: 0; /* 투명도 */
+	top: 0;
+	right: -20px;
+	transition: 0.5s; /* 애니메이션 효과의 시간설정 */
+}
+
+.span:hover a {
+	padding-right: 25px;
+}
+
+.span:hover a:after {
+	opacity: 1;
+	right: 0;
+}
+
+.menu {
+   margin: 0 auto;
+   width: 845px;
+   position: relative;
+   list-style-type: none;/*앞에 원 없앰*/
+   padding-left: 30px;
+}
+
+.menu li {
+	display: inline-block;
+}
+
+.infoTB {
+	position: relative;
+	margin: 0 auto;
+	width: 819px;
+}
+
+.inTb {
+	border-collapse: collapse; /* 테이블 테두리 하나로 통일 */
+	margin-bottom: 30px;
+}
+
+.inTb td {
+	font-family: "맑은 고딕";
+	border-top: 1px solid;
+	padding: 10px 0px 10px 0;
+}
+
+.top {
+	position: fixed;
+	width: 60px;
+	height: 30px;
+	bottom: 30px;
+	right: 30px;
+	color: #ff4d4d;
+	text-decoration: none;
+}
+
+.day {
+	font-family: "맑은 고딕";
+	font-size: 20px;
+	color: black;
+	position: relative;
+}
+
+.dayTB {
+	position: relative;
+	margin: 0 auto;
+	width: 819px;
+	padding: 5px;
+	border: 1px solid;
+}
+
+.menuTB {
+	font-family: "휴먼둥근헤드라인";
+	font-size: 40px;
+	color: black;
+	position: relative;
+}
+
+.table1 {
+	width: 790px;
+}
+
+
+</style>
+<body class="badysytle">
+	<div class="header">
+		<div class="titlestyle">
+			<a>My Secret Bakery</a>
+		</div>
+		<br> <br> <br>
+		<div class="menu">
+			<!-- href는 해당 경로로 이동하게하는 하이퍼링크
+         문서의 특정위치,다른 페이지 등으로 이동가능
+        -->
+			<span class="span"><a href="home.html">Home</a></span>  
+			<span class="span"><a href="info.html">Info</a></span>
+			<span class="span"><a href="gallery.html">Gallery</a></span> 
+			<span class="span"><a href="today's bread.html">Today's Bread</a></span>
+		</div>
+	</div>
+	<div class="content">
+		<br> <br>
+		<H1 id="Today"
+			style="letter-spacing: 12px; text-align: center; margin: 50px 0px;">Today's
+			Bread</H1>
+		<br> <a class="day"> <img src="image/시나몬 롤빵_그림.JPG"
+			width="85px" height="85px"> <script>
+         var menu, tea, bread, photo;
+         var week = new Date().getDay(); // 0(일요일)~6(토요일) 
+         switch (week) {
+         case 1: // 월요일
+            menu = "마카롱과 조각케익";
+         	tea = "홍차";
+         	photo = "<img style=\"padding-top : 20px; border = 1px solid;\" src=\"image/월요일.png\" alt=\"없음\" width=\"360px\" height=\"340px\">";
+         	bread = "새로운 주를 시작하며 꿀꿀한 마음을 달달한 마카롱과 조각케익으로 달래봐요.";
+            break;
+         case 2: // 화요일
+            menu = "바삭한 크로와상";
+         	tea = "카페라떼";
+         	photo = "<img style=\"border = 1px solid;\" src=\"image/화요일.jpg\" alt=\"없음\" width=\"360px\" height=\"340px\">";
+         	bread = "차칫 밋밋할 수 있는 베이직한 크로와상에 달달한 커피를 곁들어봐요.";
+            break;
+         case 3: // 수요일
+            menu = "모카 번";
+         	tea = "아메리카노";
+         	photo = "<img style=\"border = 1px solid;\" src=\"image/번5.jpg\" alt=\"없음\" width=\"360px\" height=\"340px\">";
+         	bread = "달콤한 모카 번에 커피를 곁들어 일상에 소소한 재미를 줘요.";
+            break;
+         case 4: // 목요일
+            menu = "호두파이";
+         	tea = "홍차";
+         	photo = "<img style=\"border = 1px solid;\" src=\"image/목요일.jpg\" alt=\"없음\" width=\"360px\" height=\"340px\">";
+         	bread = "달달한 파이와 함께 여유롭게 홍차 한잔 마시면 기분 좋아질거에요.";
+            break;
+         case 5: // 금요일
+            menu = "브레첼";
+            tea = "맥주";
+            photo = "<img style=\"border = 1px solid;\" src=\"image/브레첼5.jpg\" alt=\"없음\" width=\"360px\" height=\"340px\">";
+            bread = "힘들게 달려온 한 주를 마무리하며 베이직한 프레첼과 함께 맥주 한잔!";
+         	break;
+         case 6: // 토요일
+            menu = "펌퍼니켈";
+         	tea = "아메리카노";
+         	photo = "<img style=\"border = 1px solid;\" src=\"image/펌퍼니켈3.jpg\" alt=\"없음\" width=\"360px\" height=\"340px\">";
+         	bread = "영양가득한 펌퍼니켈에 다양한 잼을 얹어 색다른 맛을 즐겨봐요.";
+            break;
+         case 0: //일요일 
+            menu = "차파티";
+         	tea = "얼그레이 라떼";
+         	photo = "<img style=\"border = 1px solid;\" src=\"image/차파티5.jpg\" alt=\"없음\" width=\"360px\" height=\"340px\">";
+         	bread = "차파티에 홍차만큼 좋은 조합이 없죠. 색다르게 먹어보고 싶다면 카레에 찍어먹어봐요!";
+            break;
+         }
+         document.write("오늘의 추천 메뉴는 <b>" + menu + "</b> 입니다. <p/>");
+      </script>
+		</a> <br> <br>
+		<div class="dayTB">
+			<table class="table1" style="text-align: left;">
+				<tr>
+					<td rowspan="4" width="400px" height="380px"
+						style="text-align: center;"><script>
+         document.write(photo);
+         console.log(tea);
+         </script></td>
+					<td colspan="2" height="70px; "
+						style="padding-left: 7px; font-family: 맑은 고딕; font-size: 25px;">
+						<a > <img
+							src="image/주스.png" width=40px; height="40px">&nbsp;&nbsp;어울리는
+							음료
+					</a><br>
+					</td>
+
+				</tr>
+
+				<tr>
+
+					<td colspan="2" style="padding-left: 7px;"><a> <script>
+          document.write(tea);
+           console.log(tea);
+           </script>
+					</a></td>
+				</tr>
+				<tr>
+
+					<td colspan="2" height="70px;"
+						style="padding-left: 7px; font-family: 맑은 고딕; font-size: 25px;"><img
+						src="image/빵.png" width=30px; height="30px">&nbsp;&nbsp;&nbsp;빵
+						설명<br></td>
+
+				</tr>
+
+				<tr>
+
+					<td colspan="2" style="padding-left: 7px;"><a> <script>
+         document.write(bread);
+          console.log(tea);
+          </script>
+					</a></td>
+				</tr>
+			</table>
+
+		</div>
+		<br> <br>
+		<br>
+		<br>
+		<br>
+		<div style="margin: 0 auto; text-align: left; width: 790px;">
+			<a class="menuTB">Menu</a>
+		</div>
+		<br> <br> <br>
+		<div class="infoTB">
+			<table class="inTb">
+				<tr style="margin-bottom: 10px;">
+					<td
+						style="border-top: 2px solid; font-size: 20px; width: 165px; padding-top: 10px;">Mon</td>
+					<td
+						style="border-top: 2px solid; font-size: 20px; width: 165px; padding-top: 10px;">Tue</td>
+					</td>
+					<td
+						style="border-top: 2px solid; font-size: 20px; width: 165px; padding-top: 10px;">Wed</td>
+					</td>
+					<td
+						style="border-top: 2px solid; font-size: 20px; width: 165px; padding-top: 10px;">Thr</td>
+					</td>
+					<td
+						style="border-top: 2px solid; font-size: 20px; width: 165px; padding-top: 10px;">Fri</td>
+					</td>
+					<td
+						style="border-top: 2px solid; font-size: 20px; width: 165px; padding-top: 10px;">Sat</td>
+					</td>
+					<td
+						style="border-top: 2px solid; font-size: 20px; width: 165px; padding-top: 10px;">Sun</td>
+					</td>
+				</tr>
+				<tr>
+					<td>마카롱과 조각케익</td>
+					<td>크로와상</td>
+					<td>모카 번</td>
+					<td>호두파이</td>
+					<td>프레첼</td>
+					<td>펌퍼니켈</td>
+					<td>차파티</td>
+				</tr>
+			</table>
+		</div>
+		<br> <br>
+	</div>
+
+
+	</div>
+	<div class="footer"></div>
+	<div class="top">
+		<a href="#" class="top">↑Top</a>
+	</div>
+	</div>
+</body>
+</html>

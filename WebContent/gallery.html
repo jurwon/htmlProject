@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>My Secret Bakery</title>
+<script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+
+<style>
+
+/*레이아웃*/
+.header {
+	height: 400px;
+	position: relative;
+	top: 0px;
+	background-image: url("image/진열대 위 크로와상.jpg");
+	background-size: 1900px 900px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
+.footer {
+	position: relative;
+	height: 200px;
+	bottom: 0px;
+	background-color: #ffcccc;
+}
+
+/*설정*/
+.badysytle {
+	min-width: 800px;
+	background-color: white;
+	margin: 0px;
+}
+
+.titlestyle {
+	font-family: "휴먼둥근헤드라인";
+	font-size: 80px;
+	position: relativel;
+	color: #ffcccc;
+	letter-spacing: -10px;
+	padding-top: 175px;
+	text-align: center;
+}
+
+.menu {
+	margin: 0 auto;
+	width: 845px;
+	position: relative;
+	list-style-type: none; /*앞에 원 없앰*/
+	padding-left: 30px;
+}
+
+.menu a {
+	font-family: "휴먼둥근헤드라인";
+	text-align: center; /* 텍스트 중앙정렬 */
+	color: white;
+	text-decoration: none; /* 텍스트 밑줄제거(보통 하이퍼링크 제거시 사용) */
+	margin-left: 23px;
+	padding-right: 30px;
+	border-right: 1px solid;
+	letter-spacing: 10px;
+	cursor: pointer;
+}
+
+.span a {
+	/* 커서를 해당 태그에 위치시 마우스 포인터를 클릭포인터로 변경 
+   버튼이나 submit을 제외한 태그들은 커서가 기본값이기에 이를 변경하기 위에 사용*/
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.span a:after {
+	content: '\00bb';
+	/* 따옴표 문자 불러오기 자세한건  https://www.w3schools.com/cssref/pr_gen_quotes.asp 참조 */
+	position: absolute;
+	opacity: 0; /* 투명도 */
+	top: 0;
+	right: -20px;
+	transition: 0.5s; /* 애니메이션 효과의 시간설정 */
+}
+
+.span:hover a {
+	padding-right: 25px;
+}
+
+.span:hover a:after {
+	opacity: 1;
+	right: 0;
+}
+
+.menu {
+   margin: 0 auto;
+   width: 845px;
+   position: relative;
+   list-style-type: none;/*앞에 원 없앰*/
+   padding-left: 30px;
+}
+
+.menu li {
+	display: inline-block;
+}
+
+.top {
+	position: fixed;
+	width: 60px;
+	height: 30px;
+	bottom: 30px;
+	right: 30px;
+	color:  #ff4d4d;
+	text-decoration: none;
+}
+
+#auto {
+	font-family: "휴먼둥근헤드라인";
+	letter-spacing: 12px;
+	float: left;
+	width: 300px;
+	font-size: 25px;
+}
+
+.auto image {
+	margin: 0 auto;
+	width: 500px;
+	height: 300px;
+	position: relative;
+}
+
+.w3-col:FIRST-CHILD{
+   padding-left: 0px;
+}
+
+#testbtn1{
+   cursor: pointer;
+}
+
+#testbtn1-1{
+   background-color: white; 
+   border: 0;
+}
+
+#testbtn2{
+   cursor: pointer;
+}
+
+#testbtn2-2{
+   background-color: white; 
+   border: 0;
+}
+
+#testbtn3{
+   cursor: pointer;
+}
+
+#testbtn3-3{
+   background-color: white; 
+   border: 0;
+}
+
+#testbtn4{
+   cursor: pointer;
+}
+
+#testbtn4-4{
+   background-color: white; 
+   border: 0;
+}
+
+#testbtn5{
+   cursor: pointer;
+}
+
+#testbtn5-5{
+   background-color: white; 
+   border: 0;
+}
+
+.w3-col,.s4{
+   width: 60px;
+   height: 40px;
+   float: left;
+   padding: 2px 2px 2px 5px;
+}
+
+
+</style>
+<body class="badysytle">
+	<div class="header">
+		<div class="titlestyle">
+			<span>My Secret Bakery</span>
+		</div>
+		<br> <br> <br>
+		<div class="menu">
+			<!-- href는 해당 경로로 이동하게하는 하이퍼링크
+         문서의 특정위치,다른 페이지 등으로 이동가능
+        -->
+			<span class="span"><a href="home.html">Home</a></span>  
+			<span class="span"><a href="info.html">Info</a></span>
+			<span class="span"><a href="gallery.html">Gallery</a></span> 
+			<span class="span"><a href="today's bread.html">Today's Bread</a></span>
+		</div>
+	</div>
+	<div class="content">
+		<br> <br>
+
+		<!-- 겔러리 부분 -->
+		<H1
+			style="letter-spacing: 12px; text-align: center; margin: 50px 0px;">Gallery</H1>
+		<div
+			style="border-bottom: 1px solid; margin-bottom: 22px; margin: 0 auto; width: 640px; height: 45px;">
+			
+			<div id="auto" style=""> <a><image src="image/나라 아이콘/France.png" width=30px; height="30px">&nbsp;France</a></div>
+			<div style="float: right; font-size: 19px;">
+				<sub id="testbtn1">more</sub>
+			</div>
+		</div>
+		<div class="w3-content w3-section"
+			style="margin: 0 auto; max-width: 640px; max-height: 350px; margin-top: 31px;">
+			<image class="France" src="image/France/마들렌.jpg" style="width: 100%; height: 350px;">
+			<image class="France" src="image/France/마들렌2.jpg" style="width: 100%; height: 350px;">
+			<image class="France" src="image/France/마들렌3.jpg" style="width: 100%; height: 350px;">
+			<image class="France" src="image/France/마들렌7.jpg" style="width: 100%; height: 350px;">
+			<image class="France" src="image/France/바게트5.jpg" style="width: 100%; height: 350px;">
+			<image class="France" src="image/France/브리오슈5.jpg" style="width: 100%; height: 350px;">
+			<image class="France" src="image/France/브리오슈6.jpg" style="width: 100%; height: 350px;">
+			<image class="France" src="image/France/화요일.jpg" style="width: 100%; height: 350px;">
+			<image class="France" src="image/France/크루아상6.jpg" style="width: 100%; height: 350px;">
+			<image class="France" src="image/France/크루아상8.jpg" style="width: 100%; height: 350px;">
+			<image class="France" src="image/France/프렌치토스트2.jpg" style="width: 100%; height: 350px;">
+			<image class="France" src="image/France/프렌치토스트5.jpg" style="width: 100%; height: 350px;">
+		</div>
+		<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+				var i;
+				var x = document.getElementsByClassName("France");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				myIndex++;
+				if (myIndex > x.length) {
+					myIndex = 1
+				}
+				x[myIndex - 1].style.display = "block";
+				setTimeout(carousel, 2000); // Change image every 2 seconds
+			}
+		</script>
+		<br> <br> <br> <br>
+		<div
+			style="border-bottom: 1px solid; margin-bottom: 22px; margin: 0 auto; width: 640px; height: 45px;">
+			<div id="auto" style=""><a><image src="image/나라 아이콘/Germany.png" width=30px; height="30px">&nbsp;Germany</a></div>
+			<div style="float: right; font-size: 19px;">
+				<sub id="testbtn2">more</sub>
+			</div>
+		</div>
+		<div class="w3-content w3-section"
+			style="margin: 0 auto; max-width: 640px; max-height: 350px; margin-top: 31px;">
+			<image class="Germany" src="image/Germany/폴콘브로트3.jpg" style="width: 100%; height: 350px;"> 
+			<image class="Germany" src="image/Germany/볼콘브로트2.jpg" style="width: 100%; height: 350px;">
+			<image class="Germany" src="image/Germany/브레첼2.jpg" style="width: 100%; height: 350px;">
+			<image class="Germany" src="image/Germany/브레첼3.jpg" style="width: 100%; height: 350px;">
+			<image class="Germany" src="image/Germany/폴콘브로트2.jpg" style="width: 100%; height: 350px;">
+			<image class="Germany" src="image/Germany/브뢰첸2.jpg" style="width: 100%; height: 350px;">
+			<image class="Germany" src="image/Germany/슈톨렌.jpg" style="width: 100%; height: 350px;">
+			<image class="Germany" src="image/Germany/슈톨렌3.jpg" style="width: 100%; height: 350px;">
+			<image class="Germany" src="image/Germany/펌퍼니켈3.jpg" style="width: 100%; height: 350px;">
+			<image class="Germany" src="image/Germany/펌퍼니켈.jpg" style="width: 100%; height: 350px;">
+		</div>
+		<script>
+			var myIndex2 = 0;
+			carousel2();
+
+			function carousel2() {
+				var i;
+				var x = document.getElementsByClassName("Germany");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				myIndex2++;
+				if (myIndex2 > x.length) {
+					myIndex2 = 1
+				}
+				x[myIndex2 - 1].style.display = "block";
+				setTimeout(carousel2, 2000); // Change image every 2 seconds
+			}
+		</script>
+		<br> <br> <br> <br>
+		<div
+			style="border-bottom: 1px solid; margin-bottom: 22px; margin: 0 auto; width: 640px; height: 45px;">
+			<div id="auto" style=""><a><image src="image/나라 아이콘/Italy.png" width=30px; height="30px">&nbsp;Italy</a></div>
+			<div style="float: right; font-size: 19px;">
+				<sub id="testbtn3">more</sub>
+			</div>
+		</div>
+		<div class="w3-content w3-section"
+			style="margin: 0 auto; max-width: 640px; max-height: 350px; margin-top: 31px;">
+			<image class="Italy" src="image/Italy/그리시니 3.jpg" style="width: 100%; height: 350px;"> 
+			<image class="Italy" src="image/Italy/그리시니5.jpg" style="width: 100%; height: 350px;"> 
+			<image class="Italy" src="image/Italy/치아바타.jpg" style="width: 100%; height: 350px;"> 
+			<image class="Italy" src="image/Italy/치아바타4.jpg" style="width: 100%; height: 350px;"> 
+			<image class="Italy" src="image/Italy/치아바타5.jpg" style="width: 100%; height: 350px;"> 
+			<image class="Italy" src="image/Italy/치아바타6.jpg" style="width: 100%; height: 350px;"> 
+			<image class="Italy" src="image/Italy/파니니2.jpg" style="width: 100%; height: 350px;"> 
+			<image class="Italy" src="image/Italy/포카치아5.jpg" style="width: 100%; height: 350px;"> 
+			<image class="Italy" src="image/Italy/피자.jpg" style="width: 100%; height: 350px;"> 
+			<image class="Italy" src="image/Italy/피자7.jpg" style="width: 100%; height: 350px;"> 
+		</div>
+		<script>
+			var myIndex3 = 0;
+			carousel3();
+
+			function carousel3() {
+				var i;
+				var x = document.getElementsByClassName("Italy");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				myIndex3++;
+				if (myIndex3 > x.length) {
+					myIndex3 = 1
+				}
+				x[myIndex3 - 1].style.display = "block";
+				setTimeout(carousel3, 2000); // Change image every 2 seconds
+			}
+		</script>
+		<br> <br> <br> <br>
+		<div
+			style="border-bottom: 1px solid; margin-bottom: 22px; margin: 0 auto; width: 640px; height: 45px;">
+			<div id="auto" style="letter-spacing: 0px;"><a><image src="image/나라 아이콘/United States of America.png" width=30px; height="30px">&nbsp;U.S</a></div>
+			<div style="float: right; font-size: 19px;">
+				<sub id="testbtn4">more</sub>
+			</div>
+		</div>
+		<div class="w3-content w3-section"
+			style="margin: 0 auto; max-width: 640px; max-height: 350px; margin-top: 31px;">
+			<image class="US" src="image/US/머핀.jpg"style="width: 100%; height: 350px;">
+			<image class="US" src="image/US/번2.jpg"style="width: 100%; height: 350px;">
+			<image class="US" src="image/US/번5.jpg"style="width: 100%; height: 350px;">
+			<image class="US" src="image/US/스콘.jpg"style="width: 100%; height: 350px;">
+			<image class="US" src="image/US/스콘3.jpg"style="width: 100%; height: 350px;">
+			<image class="US" src="image/US/스콘7.jpg"style="width: 100%; height: 350px;">
+			<image class="US" src="image/US/스콘8.jpg"style="width: 100%; height: 350px;"> 
+			<image class="US" src="image/US/핫브로스번즈2.jpg"style="width: 100%; height: 350px;">
+		</div>
+		<script>
+			var myIndex4 = 0;
+			carousel4();
+
+			function carousel4() {
+				var i;
+				var x = document.getElementsByClassName("US");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				myIndex4++;
+				if (myIndex4 > x.length) {
+					myIndex4 = 1
+				}
+				x[myIndex4 - 1].style.display = "block";
+				setTimeout(carousel4, 2000); // Change image every 2 seconds
+			}
+		</script>
+		<br> <br> <br> <br>
+		<div
+			style="border-bottom: 1px solid; margin-bottom: 22px; margin: 0 auto; width: 640px; height: 45px;">
+			<div id="auto" style=""><a><image src="image/나라 아이콘/India.png" width=30px; height="30px">&nbsp;India</a></div>
+			<div style="float: right; font-size: 19px;">
+				<sub id="testbtn5">more</sub>
+			</div>
+		</div>
+		<div class="w3-content w3-section"
+			style="margin: 0 auto; max-width: 640px; max-height: 350px; margin-top: 31px;">
+			<image class="India" src="image/India/난2.jpg" style="width: 100%; height: 350px;">
+			<image class="India" src="image/India/난3.jpg" style="width: 100%; height: 350px;">
+			<image class="India" src="image/India/난5.jpg" style="width: 100%; height: 350px;">
+			<image class="India" src="image/India/난6.jpg" style="width: 100%; height: 350px;">
+			<image class="India" src="image/India/난8.jpg" style="width: 100%; height: 350px;">
+			<image class="India" src="image/India/차파티4.jpg" style="width: 100%; height: 350px;">
+			<image class="India" src="image/India/차파티5.jpg" style="width: 100%; height: 350px;">
+			<image class="India" src="image/India/푸리.jpg" style="width: 100%; height: 350px;">
+		</div>
+		<script>
+			var myIndex5 = 0;
+			carousel5();
+
+			function carousel5() {
+				var i;
+				var x = document.getElementsByClassName("India");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				myIndex5++;
+				if (myIndex5 > x.length) {
+					myIndex5 = 1
+				}
+				x[myIndex5 - 1].style.display = "block";
+				setTimeout(carousel5, 2000); // Change image every 2 seconds
+			}
+		</script>
+	</div>
+
+
+	<br>
+	<br>
+	<div class="footer"></div>
+	
+	<div id="testdiv1" style="display : none; position : absolute; z-index:100; top : 0; 
+background-color : rgba(0,0,0,0.5);width : 100%;height:537%">
+   <div style=" position :fixed; margin: 0 auto; left : 26%; top : 15%; 
+   background-color : white; border-radius : 20px; width: 50%; height: 70%">
+   <div style="margin: 0 auto; width: 550px; padding: 14px;"><a style="font-size: 30px; font-family: 휴먼둥근헤드라인;">France</a></div>
+   <button id="testbtn1-1" style="position:relative; float: right; top: -42px; right: 14px;">X</button>
+<div class="w3-content" style="position:relative; margin : 0 auto; padding-top: 10px; width:600px; height: 350px;">
+  <image class="mySlides1" src="image/France/화요일.jpg" style="width:100%;height: 100%">
+  <image class="mySlides1" src="image/France/마들렌.jpg" style="width:100%;height: 100%">
+  <image class="mySlides1" src="image/France/마들렌2.jpg" style="width:100%;height: 100%">
+  <image class="mySlides1" src="image/France/마들렌3.jpg" style="width:100%;height: 100%">
+  <image class="mySlides1" src="image/France/마들렌7.jpg" style="width:100%;height: 100%">
+  <image class="mySlides1" src="image/France/바게트.jpg" style="width:100%;height: 100%">
+  <image class="mySlides1" src="image/France/바게트3.jpg" style="width:100%;height: 100%">
+  <image class="mySlides1" src="image/France/바게트5.jpg" style="width:100%;height: 100%">
+  <image class="mySlides1" src="image/France/브리오슈5.jpg" style="width:100%;height: 100%">
+  <image class="mySlides1" src="image/France/브리오슈6.jpg" style="width:100%;height: 100%">
+   <image class="mySlides1" src="image/France/크루아상3.jpg" style="width:100%;height: 100%">
+    <image class="mySlides1" src="image/France/크루아상6.jpg" style="width:100%;height: 100%">
+     <image class="mySlides1" src="image/France/크루아상7.jpg" style="width:100%;height: 100%">
+      <image class="mySlides1" src="image/France/크루아상8.jpg" style="width:100%;height: 100%">
+       <image class="mySlides1" src="image/France/크루아상9.jpg" style="width:100%;height: 100%">
+       <image class="mySlides1" src="image/France/프렌치토스트2.jpg" style="width:100%;height: 100%">
+       <image class="mySlides1" src="image/France/프렌치토스트4.jpg" style="width:100%;height: 100%">
+       <image class="mySlides1" src="image/France/프렌치토스트5.jpg" style="width:100%;height: 100%">    
+  <div class="w3-row-padding w3-section" style="position:relative; ">
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/화요일.jpg" style="width:100%;height: 100%" onclick="currentDiv(1)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/마들렌.jpg" style="width:100%;height: 100%" onclick="currentDiv(2)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/마들렌2.jpg" style="width:100%;height: 100%" onclick="currentDiv(3)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/마들렌3.jpg" style="width:100%;height: 100%" onclick="currentDiv(4)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/마들렌7.jpg" style="width:100%;height: 100%" onclick="currentDiv(5)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/바게트.jpg" style="width:100%;height: 100%" onclick="currentDiv(6)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/바게트3.jpg" style="width:100%;height: 100%" onclick="currentDiv(7)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/바게트5.jpg" style="width:100%;height: 100%" onclick="currentDiv(8)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/브리오슈5.jpg" style="width:100%;height: 100%" onclick="currentDiv(9)">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section" style="position:relative;">
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/브리오슈6.jpg" style="width:100%;height: 100%" onclick="currentDiv(10)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/크루아상3.jpg" style="width:100%;height: 100%" onclick="currentDiv(11)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/크루아상6.jpg" style="width:100%;height: 100%" onclick="currentDiv(12)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/크루아상7.jpg" style="width:100%;height: 100%" onclick="currentDiv(13)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/크루아상8.jpg" style="width:100%;height: 100%" onclick="currentDiv(14)">
+    </div>
+    <div class="w3-col s4"> 
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/크루아상9.jpg" style="width:100%;height: 100%" onclick="currentDiv(15)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/프렌치토스트2.jpg" style="width:100%;height: 100%" onclick="currentDiv(16)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/프렌치토스트4.jpg" style="width:100%;height: 100%" onclick="currentDiv(17)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/France/프렌치토스트5.jpg" style="width:100%;height: 100%" onclick="currentDiv(18)">
+    </div> 
+  </div>
+</div>   
+   </div>
+   </div>
+   
+   <div id="testdiv2" style="display : none; position : absolute; z-index:100; top : 0; 
+background-color : rgba(0,0,0,0.5);width : 100%;height:527%">
+   <div style=" position :fixed; margin: 0 auto; left : 26%; top : 15%; 
+   background-color : white; border-radius : 20px; width: 50%; height: 70%;">
+   <div style="margin: 0 auto; width: 550px; padding: 14px;"><a style="font-size: 30px; font-family: 휴먼둥근헤드라인;">Germany</a></div>
+   <button id="testbtn2-2" style="position:relative; float: right; top: -42px; right: 14px;">X</button>
+<div class="w3-content" style="position:relative; margin : 0 auto; padding-top: 10px; width:600px; height: 350px;">
+  <image class="mySlides2" src="image/Germany/로겐브로트.jpg" style="width:100%;height: 100%">
+  <image class="mySlides2" src="image/Germany/밋슈브로트.jpg" style="width:100%;height: 100%">
+  <image class="mySlides2" src="image/Germany/볼콘브로트.jpg" style="width:100%;height: 100%">
+  <image class="mySlides2" src="image/Germany/볼콘브로트2.jpg" style="width:100%;height: 100%">
+  <image class="mySlides2" src="image/Germany/브레첼2.jpg" style="width:100%;height: 100%">
+  <image class="mySlides2" src="image/Germany/브레첼3.jpg" style="width:100%;height: 100%">
+  <image class="mySlides2" src="image/Germany/브레첼5.jpg" style="width:100%;height: 100%">
+  <image class="mySlides2" src="image/Germany/브레첼6.jpg" style="width:100%;height: 100%">
+  <image class="mySlides2" src="image/Germany/브뢰첸2.png" style="width:100%;height: 100%">
+  <image class="mySlides2" src="image/Germany/슈로트브로트.jpg" style="width:100%;height: 100%">
+   <image class="mySlides2" src="image/Germany/슈톨렌.jpg" style="width:100%;height: 100%">
+    <image class="mySlides2" src="image/Germany/슈톨렌3.jpg" style="width:100%;height: 100%">
+     <image class="mySlides2" src="image/Germany/펌퍼니켈.jpg" style="width:100%;height: 100%">
+      <image class="mySlides2" src="image/Germany/펌퍼니켈3.jpg" style="width:100%;height: 100%">
+       <image class="mySlides2" src="image/Germany/폴콘브로트2.jpg" style="width:100%;height: 100%">
+       <image class="mySlides2" src="image/Germany/폴콘브로트3.jpg" style="width:100%;height: 100%">
+       <image class="mySlides2" src="image/Germany/폴콘브로트5.jpg" style="width:100%;height: 100%">
+       <image class="mySlides2" src="image/Germany/프레즐 커피.jpg" style="width:100%;height: 100%">    
+  <div class="w3-row-padding w3-section" style="position:relative; ">
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/로겐브로트.jpg" style="width:100%;height: 100%" onclick="currentDiv1(1)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/밋슈브로트.jpg" style="width:100%;height: 100%" onclick="currentDiv1(2)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/볼콘브로트.jpg" style="width:100%;height: 100%" onclick="currentDiv1(3)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/볼콘브로트2.jpg" style="width:100%;height: 100%" onclick="currentDiv1(4)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/브레첼2.jpg" style="width:100%;height: 100%" onclick="currentDiv1(5)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/브레첼3.jpg" style="width:100%;height: 100%" onclick="currentDiv1(6)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/브레첼5.jpg" style="width:100%;height: 100%" onclick="currentDiv1(7)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/브레첼6.png" style="width:100%;height: 100%" onclick="currentDiv1(8)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/브뢰첸2.jpg" style="width:100%;height: 100%" onclick="currentDiv1(9)">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section" style="position:relative;">
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/슈로트브로트.jpg" style="width:100%;height: 100%" onclick="currentDiv1(10)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/슈톨렌.jpg" style="width:100%;height: 100%" onclick="currentDiv1(11)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/슈톨렌3.jpg" style="width:100%;height: 100%" onclick="currentDiv1(12)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/펌퍼니켈.jpg" style="width:100%;height: 100%" onclick="currentDiv1(13)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/펌퍼니켈3.jpg" style="width:100%;height: 100%" onclick="currentDiv1(14)">
+    </div>
+    <div class="w3-col s4"> 
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/폴콘브로트2.jpg" style="width:100%;height: 100%" onclick="currentDiv1(15)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/폴콘브로트3.jpg" style="width:100%;height: 100%" onclick="currentDiv1(16)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/폴콘브로트5.jpg" style="width:100%;height: 100%" onclick="currentDiv1(17)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo2 w3-opacity w3-hover-opacity-off" src="image/Germany/프레즐 커피.jpg" style="width:100%;height: 100%" onclick="currentDiv1(18)">
+    </div> 
+  </div>
+</div>   
+   </div>
+   </div>
+   
+   <div id="testdiv3" style="display : none; position : absolute; z-index:100; top : 0; 
+background-color : rgba(0,0,0,0.5);width : 100%;height:537%">
+   <div style=" position :fixed; margin: 0 auto; left : 312px; top : 38px; 
+   background-color : white; border-radius : 20px; width: 700px; height: 550px;">
+   <div style="margin: 0 auto; width: 550px; padding: 14px;"><a style="font-size: 30px; font-family: 휴먼둥근헤드라인;">Italy</a></div>
+   <button id="testbtn3-3" style="position:relative; float: right; top: -42px; right: 14px;">X</button>
+<div class="w3-content" style="position:relative; margin : 0 auto; padding-top: 10px; width:600px; height: 350px;">
+  <image class="mySlides3" src="image/Italy/그리시니 3.jpg" style="width:100%;height: 100%">
+  <image class="mySlides3" src="image/Italy/그리시니4.jpg" style="width:100%;height: 100%">
+  <image class="mySlides3" src="image/Italy/그리시니5.jpg" style="width:100%;height: 100%">
+  <image class="mySlides3" src="image/Italy/치아바타.jpg" style="width:100%;height: 100%">
+  <image class="mySlides3" src="image/Italy/치아바타4.jpg" style="width:100%;height: 100%">
+  <image class="mySlides3" src="image/Italy/치아바타5.jpg" style="width:100%;height: 100%">
+  <image class="mySlides3" src="image/Italy/치아바타6.jpg" style="width:100%;height: 100%">
+  <image class="mySlides3" src="image/Italy/파니니2.jpg" style="width:100%;height: 100%">
+  <image class="mySlides3" src="image/Italy/파니니3.jpg" style="width:100%;height: 100%">
+  <image class="mySlides3" src="image/Italy/파니니4.jpg" style="width:100%;height: 100%">
+   <image class="mySlides3" src="image/Italy/파니니6.jpg" style="width:100%;height: 100%">
+    <image class="mySlides3" src="image/Italy/포카치아2.jpg" style="width:100%;height: 100%">
+     <image class="mySlides3" src="image/Italy/포카치아5.jpg" style="width:100%;height: 100%">
+      <image class="mySlides3" src="image/Italy/포카치아6.jpg" style="width:100%;height: 100%">
+       <image class="mySlides3" src="image/Italy/피자.jpg" style="width:100%;height: 100%">
+       <image class="mySlides3" src="image/Italy/피자2.jpg" style="width:100%;height: 100%">
+       <image class="mySlides3" src="image/Italy/피자6.jpg" style="width:100%;height: 100%">
+       <image class="mySlides3" src="image/Italy/피자7.jpg" style="width:100%;height: 100%">    
+  <div class="w3-row-padding w3-section" style="position:relative; ">
+    <div class="w3-col s4">
+      <image class="demo1 w3-opacity w3-hover-opacity-off" src="image/Italy/그리시니 3.jpg" style="width:100%;height: 100%" onclick="currentDiv2(1)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/그리시니4.jpg" style="width:100%;height: 100%" onclick="currentDiv2(2)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/그리시니5.jpg" style="width:100%;height: 100%" onclick="currentDiv2(3)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/치아바타.jpg" style="width:100%;height: 100%" onclick="currentDiv2(4)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/치아바타4.jpg" style="width:100%;height: 100%" onclick="currentDiv2(5)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/치아바타5.jpg" style="width:100%;height: 100%" onclick="currentDiv2(6)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/치아바타6.jpg" style="width:100%;height: 100%" onclick="currentDiv2(7)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/파니니2.jpg" style="width:100%;height: 100%" onclick="currentDiv2(8)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/파니니3.jpg" style="width:100%;height: 100%" onclick="currentDiv2(9)">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section" style="position:relative;">
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/파니니4.jpg" style="width:100%;height: 100%" onclick="currentDiv2(10)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/파니니6.jpg" style="width:100%;height: 100%" onclick="currentDiv2(11)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/포카치아2.jpg" style="width:100%;height: 100%" onclick="currentDiv2(12)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/포카치아5.jpg" style="width:100%;height: 100%" onclick="currentDiv2(13)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/포카치아6.jpg" style="width:100%;height: 100%" onclick="currentDiv2(14)">
+    </div>
+    <div class="w3-col s4"> 
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/피자.jpg" style="width:100%;height: 100%" onclick="currentDiv2(15)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/피자2.jpg" style="width:100%;height: 100%" onclick="currentDiv2(16)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/피자6.jpg" style="width:100%;height: 100%" onclick="currentDiv2(17)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo3 w3-opacity w3-hover-opacity-off" src="image/Italy/피자7.jpg" style="width:100%;height: 100%" onclick="currentDiv2(18)">
+    </div> 
+  </div>
+</div>   
+   </div>
+   </div>
+   
+   <div id="testdiv4" style="display : none; position : absolute; z-index:100; top : 0; 
+background-color : rgba(0,0,0,0.5);width : 100%;height:537%">
+   <div style=" position :fixed; margin: 0 auto; left : 312px; top : 38px; 
+   background-color : white; border-radius : 20px; width: 700px; height: 550px;">
+   <div style="margin: 0 auto; width: 550px; padding: 14px;"><a style="font-size: 30px; font-family: 휴먼둥근헤드라인;">U.S</a></div>
+   <button id="testbtn4-4" style="position:relative; float: right; top: -42px; right: 14px;">X</button>
+<div class="w3-content" style="position:relative; margin : 0 auto; padding-top: 10px; width:600px; height: 350px;">
+  <image class="mySlides4" src="image/US/머핀.jpg" style="width:100%;height: 100%">
+  <image class="mySlides4" src="image/US/번.jpg" style="width:100%;height: 100%">
+  <image class="mySlides4" src="image/US/번2.jpg" style="width:100%;height: 100%">
+  <image class="mySlides4" src="image/US/번5.jpg" style="width:100%;height: 100%">
+  <image class="mySlides4" src="image/US/번6.jpg" style="width:100%;height: 100%">
+  <image class="mySlides4" src="image/US/블루머.jpg" style="width:100%;height: 100%">
+  <image class="mySlides4" src="image/US/스콘.jpg" style="width:100%;height: 100%">
+  <image class="mySlides4" src="image/US/스콘3.jpg" style="width:100%;height: 100%">
+  <image class="mySlides4" src="image/US/스콘4.jpg" style="width:100%;height: 100%">
+  <image class="mySlides4" src="image/US/스콘6.jpg" style="width:100%;height: 100%">
+   <image class="mySlides4" src="image/US/스콘7.jpg" style="width:100%;height: 100%">
+    <image class="mySlides4" src="image/US/스콘8.jpg" style="width:100%;height: 100%">
+     <image class="mySlides4" src="image/US/스콘9.jpg" style="width:100%;height: 100%">
+      <image class="mySlides4" src="image/US/영국빵.jpg" style="width:100%;height: 100%">
+       <image class="mySlides4" src="image/US/팜하우스로프.jpg" style="width:100%;height: 100%">
+       <image class="mySlides4" src="image/US/핫브로스번즈2.jpg" style="width:100%;height: 100%">
+       <image class="mySlides4" src="image/US/핫크로스번즈.jpg" style="width:100%;height: 100%">
+       <image class="mySlides4" src="image/US/핫크로스번즈3.jpg" style="width:100%;height: 100%">    
+  <div class="w3-row-padding w3-section" style="position:relative; ">
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/머핀.jpg" style="width:100%;height: 100%" onclick="currentDiv3(1)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/번.jpg" style="width:100%;height: 100%" onclick="currentDiv3(2)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/번2.jpg" style="width:100%;height: 100%" onclick="currentDiv3(3)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/번5.jpg" style="width:100%;height: 100%" onclick="currentDiv3(4)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/번6.jpg" style="width:100%;height: 100%" onclick="currentDiv3(5)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/스콘.jpg" style="width:100%;height: 100%" onclick="currentDiv3(6)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/스콘3.jpg" style="width:100%;height: 100%" onclick="currentDiv3(7)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/스콘4.jpg" style="width:100%;height: 100%" onclick="currentDiv3(8)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/스콘6.jpg" style="width:100%;height: 100%" onclick="currentDiv3(9)">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section" style="position:relative;">
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/스콘7.jpg" style="width:100%;height: 100%" onclick="currentDiv3(10)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/스콘8.jpg" style="width:100%;height: 100%" onclick="currentDiv3(11)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/스콘9.jpg" style="width:100%;height: 100%" onclick="currentDiv3(12)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/영국빵.jpg" style="width:100%;height: 100%" onclick="currentDiv3(13)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/팜하우스로프.jpg" style="width:100%;height: 100%" onclick="currentDiv3(14)">
+    </div>
+    <div class="w3-col s4"> 
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/핫브로스번즈2.jpg" style="width:100%;height: 100%" onclick="currentDiv3(15)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/핫크로스번즈.jpg" style="width:100%;height: 100%" onclick="currentDiv3(16)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/핫크로스번즈3.jpg" style="width:100%;height: 100%" onclick="currentDiv3(17)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo4 w3-opacity w3-hover-opacity-off" src="image/US/블루머.jpg" style="width:100%;height: 100%" onclick="currentDiv3(18)">
+    </div> 
+  </div>
+</div>   
+   </div>
+   </div>
+   
+   <div id="testdiv5" style="display : none; position : absolute; z-index:100; top : 0; 
+background-color : rgba(0,0,0,0.5);width : 100%;height:537%">
+   <div style=" position :fixed; margin: 0 auto; left : 312px; top : 38px; 
+   background-color : white; border-radius : 20px; width: 700px; height: 550px;">
+   <div style="margin: 0 auto; width: 550px; padding: 14px;"><a style="font-size: 30px; font-family: 휴먼둥근헤드라인;">India</a></div>
+   <button id="testbtn5-5" style="position:relative; float: right; top: -42px; right: 14px;">X</button>
+<div class="w3-content" style="position:relative; margin : 0 auto; padding-top: 10px; width:600px; height: 350px;">
+  <image class="mySlides5" src="image/India/난.jpg" style="width:100%;height: 100%">
+  <image class="mySlides5" src="image/India/난10.jpg" style="width:100%;height: 100%">
+  <image class="mySlides5" src="image/India/난11.jpg" style="width:100%;height: 100%">
+  <image class="mySlides5" src="image/India/난12.jpg" style="width:100%;height: 100%">
+  <image class="mySlides5" src="image/India/난2.jpg" style="width:100%;height: 100%">
+  <image class="mySlides5" src="image/India/난3.jpg" style="width:100%;height: 100%">
+  <image class="mySlides5" src="image/India/난4.jpg" style="width:100%;height: 100%">
+  <image class="mySlides5" src="image/India/난5.jpg" style="width:100%;height: 100%">
+  <image class="mySlides5" src="image/India/난6.jpg" style="width:100%;height: 100%">
+  <image class="mySlides5" src="image/India/난7.jpg" style="width:100%;height: 100%">
+   <image class="mySlides5" src="image/India/난8.jpg" style="width:100%;height: 100%">
+    <image class="mySlides5" src="image/India/난9.jpg" style="width:100%;height: 100%">
+     <image class="mySlides5" src="image/India/차파티.jpg" style="width:100%;height: 100%">
+      <image class="mySlides5" src="image/India/차파티2.jpg" style="width:100%;height: 100%">
+       <image class="mySlides5" src="image/India/차파티3.jpg" style="width:100%;height: 100%">
+       <image class="mySlides5" src="image/India/차파티4.jpg" style="width:100%;height: 100%">
+       <image class="mySlides5" src="image/India/차파티5.jpg" style="width:100%;height: 100%">
+       <image class="mySlides5" src="image/India/푸리.jpg" style="width:100%;height: 100%">    
+  <div class="w3-row-padding w3-section" style="position:relative; ">
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/난.jpg" style="width:100%;height: 100%" onclick="currentDiv4(1)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/난10.jpg" style="width:100%;height: 100%" onclick="currentDiv4(2)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/난11.jpg" style="width:100%;height: 100%" onclick="currentDiv4(3)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/난12.jpg" style="width:100%;height: 100%" onclick="currentDiv4(4)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/난2.jpg" style="width:100%;height: 100%" onclick="currentDiv4(5)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/난3.jpg" style="width:100%;height: 100%" onclick="currentDiv4(6)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/난4.jpg" style="width:100%;height: 100%" onclick="currentDiv4(7)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/난5.jpg" style="width:100%;height: 100%" onclick="currentDiv4(8)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/난6.jpg" style="width:100%;height: 100%" onclick="currentDiv4(9)">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section" style="position:relative;">
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/난7.jpg" style="width:100%;height: 100%" onclick="currentDiv4(10)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/난8.jpg" style="width:100%;height: 100%" onclick="currentDiv4(11)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/난9.jpg" style="width:100%;height: 100%" onclick="currentDiv4(12)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/차파티.jpg" style="width:100%;height: 100%" onclick="currentDiv4(13)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/차파티2.jpg" style="width:100%;height: 100%" onclick="currentDiv4(14)">
+    </div>
+    <div class="w3-col s4"> 
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/차파티3.jpg" style="width:100%;height: 100%" onclick="currentDiv4(15)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/차파티4.jpg" style="width:100%;height: 100%" onclick="currentDiv4(16)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/차파티5.jpg" style="width:100%;height: 100%" onclick="currentDiv4(17)">
+    </div>
+    <div class="w3-col s4">
+      <image class="demo5 w3-opacity w3-hover-opacity-off" src="image/India/푸리.jpg" style="width:100%;height: 100%" onclick="currentDiv4(18)">
+    </div> 
+  </div>
+</div>   
+   </div>
+   </div>
+	<div class="top">
+		<a href="#" class="top">↑Top</a>
+	</div>
+	</div>
+	<script type="text/javascript">
+$(document).ready(function() { 
+    $('#testbtn1').click(function() { 
+         $("#testdiv1").fadeIn("slow");
+    });
+    $('#testbtn1-1').click(function() { 
+       $("#testdiv1").css("display","none");
+    });
+}); 
+   </script>
+   
+   <script type="text/javascript">
+$(document).ready(function() { 
+    $('#testbtn2').click(function() { 
+         $("#testdiv2").fadeIn("slow");
+    });
+    $('#testbtn2-2').click(function() { 
+       $("#testdiv2").css("display","none");
+    });
+}); 
+   </script>
+  
+   <script type="text/javascript">
+$(document).ready(function() { 
+    $('#testbtn3').click(function() { 
+         $("#testdiv3").fadeIn("slow");
+    });
+    $('#testbtn3-3').click(function() { 
+       $("#testdiv3").css("display","none");
+    });
+}); 
+   </script>
+    
+   <script type="text/javascript">
+$(document).ready(function() { 
+    $('#testbtn4').click(function() { 
+         $("#testdiv4").fadeIn("slow");
+    });
+    $('#testbtn4-4').click(function() { 
+       $("#testdiv4").css("display","none");
+    });
+}); 
+   </script>
+   
+   <script type="text/javascript">
+$(document).ready(function() { 
+    $('#testbtn5').click(function() { 
+         $("#testdiv5").fadeIn("slow");
+    });
+    $('#testbtn5-5').click(function() { 
+       $("#testdiv5").css("display","none");
+    });
+}); 
+   </script>
+   
+<script>
+var slideIndex1 = 1;
+showDivs1(slideIndex1);
+
+function plusDivs(n) {
+  showDivs1(slideIndex1 += n);
+}
+
+function currentDiv(n) {
+  showDivs1(slideIndex1 = n);
+}
+
+function showDivs1(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides1");
+  var dots = document.getElementsByClassName("demo1");
+  if (n > x.length) {slideIndex1 = 1}    
+  if (n < 1) {slideIndex1 = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+	     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+	  }
+	  x[slideIndex1-1].style.display = "block";
+	  dots[slideIndex1-1].className += " w3-opacity-off";
+	}
+</script>
+
+<script>
+var slideIndex2 = 1;
+showDivs2(slideIndex2);
+
+function plusDivs1(n) {
+  showDivs2(slideIndex2 += n);
+}
+
+function currentDiv1(n) {
+  showDivs2(slideIndex2 = n);
+}
+
+function showDivs2(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides2");
+  var dots = document.getElementsByClassName("demo2");
+  if (n > x.length) {slideIndex2 = 1}    
+  if (n < 1) {slideIndex2 = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+	     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+	  }
+	  x[slideIndex2-1].style.display = "block";
+	  dots[slideIndex2-1].className += " w3-opacity-off";
+	}
+</script>
+
+<script>
+var slideIndex3 = 1;
+slideIndex3(slideIndex3);
+
+function plusDivs(n) {
+  showDivs3(slideIndex3 += n);
+}
+
+function currentDiv2(n) {
+  showDivs3(slideIndex3 = n);
+}
+
+function showDivs3(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides3");
+  var dots = document.getElementsByClassName("demo3");
+  if (n > x.length) {slideIndex3 = 1}    
+  if (n < 1) {slideIndex3 = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+	     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+	  }
+	  x[slideIndex3-1].style.display = "block";
+	  dots[slideIndex3-1].className += " w3-opacity-off";
+	}
+</script>
+
+<script>
+var slideIndex4 = 1;
+showDivs4(slideIndex4);
+
+function plusDivs(n) {
+  showDivs4(slideIndex4 += n);
+}
+
+function currentDiv3(n) {
+  showDivs4(slideIndex4 = n);
+}
+
+function showDivs4(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides4");
+  var dots = document.getElementsByClassName("demo4");
+  if (n > x.length) {slideIndex4 = 1}    
+  if (n < 1) {slideIndex4 = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+	     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+	  }
+	  x[slideIndex4-1].style.display = "block";
+	  dots[slideIndex4-1].className += " w3-opacity-off";
+	}
+</script>
+
+<script>
+var slideIndex5 = 1;
+showDivs5(slideIndex5);
+
+function plusDivs(n) {
+  showDivs5(slideIndex5 += n);
+}
+
+function currentDiv4(n) {
+  showDivs5(slideIndex5 = n);
+}
+
+function showDivs5(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides5");
+  var dots = document.getElementsByClassName("demo5");
+  if (n > x.length) {slideIndex5 = 1}    
+  if (n < 1) {slideIndex5 = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+	     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+	  }
+	  x[slideIndex5-1].style.display = "block";
+	  dots[slideIndex5-1].className += " w3-opacity-off";
+	}
+</script>
+
+</body>
+</html>
